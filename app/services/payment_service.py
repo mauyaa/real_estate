@@ -1,7 +1,8 @@
 from __future__ import annotations
 
+import copy
 import uuid
-from typing import Dict, Iterable, List
+from typing import Dict, Iterable
 
 from app.models.property import PaymentEntry
 
@@ -26,6 +27,7 @@ class PaymentService:
     ) -> PaymentEntry:
         if amount_kes <= 0:
             raise InsufficientAmountError("Amount must be positive")
+        metadata_copy = copy.deepcopy(metadata) if metadata is not None else {}
         entry = PaymentEntry(
             entry_id=str(uuid.uuid4()),
             booking_id=booking_id,
@@ -34,7 +36,7 @@ class PaymentService:
             amount_kes=amount_kes,
             currency=currency,
             type=type_,
-            metadata=metadata or {},
+            metadata=metadata_copy,
         )
         self._ledger[entry.entry_id] = entry
         return entry

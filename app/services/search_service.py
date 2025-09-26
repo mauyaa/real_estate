@@ -5,7 +5,7 @@ from typing import Iterable, Sequence
 
 from app.models.property import GeoPoint, Property
 from app.repositories.property_repository import PropertyRepository
-from app.utils.geometry import centroid, point_in_polygon
+from app.utils.geometry import point_in_polygon
 
 
 @dataclass
@@ -45,7 +45,7 @@ class SearchService:
                 search_polygon = [GeoPoint(lat=lat, lon=lon) for lat, lon in filters.polygon]
                 if len(search_polygon) < 3:
                     return False
-                if not point_in_polygon(centroid(property_.polygon), search_polygon):
+                if not point_in_polygon(property_.location, search_polygon):
                     return False
             return True
 
