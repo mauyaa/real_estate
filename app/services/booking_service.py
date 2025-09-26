@@ -39,7 +39,10 @@ class BookingService:
             raise UnknownAgentError(f"No availability for agent {property_.agent_id}")
         if desired_slot not in availability.available_slots:
             raise BookingConflictError("Requested slot is not available")
-        if any(booking.scheduled_slot == desired_slot for booking in self._bookings.values()):
+        if any(
+            booking.scheduled_slot == desired_slot and booking.agent_id == property_.agent_id
+            for booking in self._bookings.values()
+        ):
             raise BookingConflictError("Slot already booked")
 
         booking = Booking(
