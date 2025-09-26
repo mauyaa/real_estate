@@ -216,4 +216,5 @@ The Kenya-focused platform must simultaneously delight renters and buyers, empow
 
 - [Delivery Roadmap](./delivery_roadmap.md) – phased plan with releases, ownership, and instrumentation gates.
 - [Architecture Overview](./architecture_overview.md) – high-level system topology, data flows, and integration points.
+- [Payments & Escrow Design](./payments_escrow_design.md) – detailed flows, ledger model, and compliance controls for rent collection.
 
