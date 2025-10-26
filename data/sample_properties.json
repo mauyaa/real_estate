@@ -1,0 +1,56 @@
+[
+  {
+    "id": "prop-001",
+    "title": "Modern 2BR in Kilimani",
+    "price_kes": 85000,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "amenities": ["parking", "gym", "backup_power"],
+    "verified": true,
+    "location": {"lat": -1.2921, "lon": 36.7820},
+    "commute_minutes_to_cbd": 15,
+    "polygon": [
+      {"lat": -1.2925, "lon": 36.7800},
+      {"lat": -1.2915, "lon": 36.7800},
+      {"lat": -1.2915, "lon": 36.7840},
+      {"lat": -1.2925, "lon": 36.7840}
+    ],
+    "agent_id": "agent-kenya-01"
+  },
+  {
+    "id": "prop-002",
+    "title": "Affordable 1BR near Matatu Stage",
+    "price_kes": 38000,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "amenities": ["parking", "borehole"],
+    "verified": false,
+    "location": {"lat": -1.3001, "lon": 36.8002},
+    "commute_minutes_to_cbd": 25,
+    "polygon": [
+      {"lat": -1.3005, "lon": 36.7982},
+      {"lat": -1.2995, "lon": 36.7982},
+      {"lat": -1.2995, "lon": 36.8022},
+      {"lat": -1.3005, "lon": 36.8022}
+    ],
+    "agent_id": "agent-kenya-02"
+  },
+  {
+    "id": "prop-003",
+    "title": "Spacious 4BR in Runda",
+    "price_kes": 250000,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "amenities": ["pool", "gym", "security"],
+    "verified": true,
+    "location": {"lat": -1.2200, "lon": 36.8300},
+    "commute_minutes_to_cbd": 35,
+    "polygon": [
+      {"lat": -1.2205, "lon": 36.8280},
+      {"lat": -1.2195, "lon": 36.8280},
+      {"lat": -1.2195, "lon": 36.8320},
+      {"lat": -1.2205, "lon": 36.8320}
+    ],
+    "agent_id": "agent-kenya-01"
+  }
+]
